@@ -4,7 +4,7 @@ from .models import Movie
 
 class MovieSerializer(serializers.Serializer):
     title = serializers.CharField(read_only=True)
-    description = serializers.CharField(required=False, max_length=255)
+    description = serializers.CharField(required=False)
     duration = serializers.IntegerField()
 
     def create(self, validated_data):
